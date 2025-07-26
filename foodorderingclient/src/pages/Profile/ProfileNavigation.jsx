@@ -73,7 +73,7 @@ function ProfileNavigation({ open, handleClose }) {
                 <div className='w-[50vw] lg:w-[20vw] h-full flex flex-col justify-center text-xl gap-8 pt-16' style={{backgroundColor: theme.palette.background.nav}}>
                     {
                         menu.map((item, index) => (
-                            <>
+                            <div key={index}>
                                 <div onClick={() => handleNavigate(item?.title)} className=' px-5 flex items-center space-x-5 cursor-pointer' style={path === item?.title?.toLocaleLowerCase() ? { color: 'orange' } : {}}>
                                     {item.icon}
                                     <span>{item.title}</span>
@@ -81,7 +81,7 @@ function ProfileNavigation({ open, handleClose }) {
                                 {
                                     index !== menu.length - 1 && <Divider />
                                 }
-                            </>
+                            </div>
                         ))
                     }
                 </div>

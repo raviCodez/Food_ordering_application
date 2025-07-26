@@ -84,7 +84,7 @@ const TopMealsCarousel = () => {
         >
             {
                 carouselItems.map(item => (
-                    <TopMealItem item={item}/>
+                    <TopMealItem key={item.id} item={item}/>
                 ))
             }
         </Slider>

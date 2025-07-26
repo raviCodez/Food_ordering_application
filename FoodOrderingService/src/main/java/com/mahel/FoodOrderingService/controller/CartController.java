@@ -40,7 +40,7 @@ public class CartController {
         return new ResponseEntity<>(response, response.getHttpStatus());
     }
 
-    @GetMapping("/cart-item/update")
+    @PutMapping("/cart-item/update")
     public ResponseEntity<ResponseDTO<CartItem>> updateCartItemQuantity(
             @RequestBody CartItemDTO cartItemDTO,
             @RequestHeader("Authorization") String jwt

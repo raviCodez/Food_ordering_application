@@ -95,7 +95,7 @@ const MenuCard = () => {
                                         <FormGroup>
                                             {
                                                 item?.ingredients?.map((ingredient, ingredientIndex) =>
-                                                    <FormControlLabel key={ingredientIndex} control={<Checkbox onChange={() => handleCheckBoxChange(ingredient)}/>} label={ingredient} />
+                                                    <FormControlLabel key={ingredientIndex} control={<Checkbox onChange={() => handleCheckBoxChange(ingredient)} />} label={ingredient} />
                                                 )
                                             }
                                         </FormGroup>

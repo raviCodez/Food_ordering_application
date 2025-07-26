@@ -61,7 +61,7 @@ public class FoodController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ResponseDTO<Boolean>> deleteFood(@RequestParam Long id) throws Exception {
+    public ResponseEntity<ResponseDTO<Boolean>> deleteFood(@PathVariable Long id) throws Exception {
 
         ResponseDTO<Boolean> response = new ResponseDTO<>();
         boolean isDelete = foodService.deleteFood(id);

@@ -91,10 +91,10 @@ function LoginForm() {
               label="Email"
               fullWidth
               variant="outlined"
-              value={values.username}
+              value={values.email}
               onChange={handleChange}
-              error={Boolean(errors.username)}
-              helperText={errors.username}
+              error={Boolean(errors.email)}
+              helperText={errors.email}
               margin="normal"
             />
           </Grid>

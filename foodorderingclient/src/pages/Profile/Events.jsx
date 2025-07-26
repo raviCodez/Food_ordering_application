@@ -5,7 +5,7 @@ function Events() {
   return (
     <div className=' flex flex-wrap  gap-6 justify-center mt-8'>
       {
-        [1,1,1,1].map((item, index) => <EventCard />)
+        [1,1,1,1].map((item, index) => <EventCard key={index} />)
       }
     </div>
   )

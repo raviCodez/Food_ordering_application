@@ -51,15 +51,15 @@ const Restaurant = () => {
             <div>
                <Grid container spacing={2}>
                   <Grid item xs={12}>
-                     <img className=' w-full h-[40vh] object-cover' src={restaurant?.images[0]} alt="" />
+                     <img className=' w-full h-[40vh] object-cover' src={restaurant?.images?.[0]} alt="" />
                   </Grid>
                   <Grid item xs={12} lg={restaurant?.images.length > 2 ? 6 : 12}>
-                     <img className=' w-full h-[40vh] object-cover' src={restaurant?.images[1]} alt="" />
+                     <img className=' w-full h-[40vh] object-cover' src={restaurant?.images?.[1]} alt="" />
                   </Grid>
                   {
-                     restaurant?.images.length > 2 &&
+                     restaurant?.images?.length > 2 &&
                      <Grid item xs={12} lg={6}>
-                        <img className=' w-full h-[40vh] object-cover' src="https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
+                        <img className=' w-full h-[40vh] object-cover' src={restaurant?.images[2]} alt="" />
                      </Grid>
                   }
                </Grid>
@@ -69,7 +69,6 @@ const Restaurant = () => {
                <div className=' flex flex-col gap-4'>
                   <p className={` lg:max-w-[80%]`} style={{ color: theme.palette.background.gray }}>{restaurant?.description}</p>
                   <span><AccessTimeIcon color='warning' /> {restaurant?.openingHours} (Today)</span>
-                  <span><PlaceIcon color='warning' />{restaurant?.address.street}</span>
                </div>
             </div>
          </section>
@@ -120,8 +119,8 @@ const Restaurant = () => {
             </div>
             <div className=' space-y-5 lg:w-[80%] lg:pl-10 sm:mt-6'>
                {
-                  foodItem.map((item, key) => (
-                     <MenuCard />
+                 foodItem.map((item, index) => (
+                    <MenuCard key={index} />
                   ))
                }
             </div>

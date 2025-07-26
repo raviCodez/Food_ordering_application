@@ -16,7 +16,7 @@ const RestaurantList = () => {
     return (
         <div className="flex flex-wrap lg:gap-10 gap-3 justify-center">
             {restaurants?.map((restaurant, index) => (
-                <RestaurantCard restaurant={restaurant}/>
+                <RestaurantCard key={index} restaurant={restaurant}/>
             ))}
         </div>
     );

@@ -35,7 +35,7 @@ public class CartServiceImpl implements CartService {
     public CartItem addItemToCart(CartItemDTO cartItemDTO, String jwt) throws Exception {
 
         User user = userService.userByToken(jwt);
-        Food food = foodService.findFoodById(user.getId());
+        Food food = foodService.findFoodById(cartItemDTO.getFood());
 
         Cart cart = cartRepository.findByCustomerId(user.getId());
 

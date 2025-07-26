@@ -81,7 +81,7 @@ const Cart = () => {
             <h1 className=' text-center font-semibold text-2xl py-10'>Choose Delivery Address</h1>
             <div className=' flex gap-5 flex-wrap justify-center'>
               {
-                [1, 1, 1].map((item) => <AddressCard showButton={true} item={item} handleSelectAddress={createOrderUsingSelectedAddress} />)
+                [1, 1, 1].map((item, index) => <AddressCard key={index} showButton={true} item={item} handleSelectAddress={createOrderUsingSelectedAddress} />)
               }
             </div>
             <Card className=' flex gap-5 w-64 p-5 mt-4' style={{ backgroundColor: `${mode === "dark" ? "#EEe" : "#526D82"}`, color: `${mode === "dark" ? "#000" : "#fff"}` }}>
@@ -148,7 +148,7 @@ const Cart = () => {
                     variant="outlined"
                     error
                     helperText={
-                      <ErrorMessage name="streetAddress" />
+                      <ErrorMessage name="pincode" />
                     }
                     InputProps={{
                       style: { color: '#000' }
@@ -185,4 +185,3 @@ const Cart = () => {
 }
 
 export default Cart
-

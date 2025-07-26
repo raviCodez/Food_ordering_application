@@ -2,7 +2,7 @@ import { Button, Card, useTheme } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home'
 import { useThemeContext } from '../../Theme/ThemeContext';
 
-function AddressCard({ item, showButton, handleSelectAddress }) {
+function AddressCard({ item, showButton, handleSelectAddress = () => {} }) {
 
     const { mode } = useThemeContext();
     const theme = useTheme();

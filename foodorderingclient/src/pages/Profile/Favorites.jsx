@@ -13,7 +13,7 @@ function Favorites() {
         favorites.length > 0 ? (
           <div className="flex flex-wrap lg:gap-10 gap-3 justify-center">
             {favorites?.map((restaurant, index) => (
-              <RestaurantCard restaurant={restaurant} />
+              <RestaurantCard key={index} restaurant={restaurant} />
             ))}
           </div>
         ) : <h1 className="text-center text-2xl mt-14">No favorites yet</h1>
